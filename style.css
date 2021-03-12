@@ -1,6 +1,12 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
 
 /*
 	BARVY
@@ -15,24 +21,122 @@ html { box-sizing: border-box; }
 */
 
 body {
-	padding: 0;
-	margin: 0;
-	background-color: #e5e5e5;
-	font-family: "Source Sans Pro", sans-serif;
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  background-color: #e5e5e5;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .obal {
-	/* obsah stránky je omezený do pruhu širokého 960px */
-	width: 960px;
+  /* obsah stránky je omezený do pruhu širokého 960px */
+  width: 960px;
 
-	/* pruh je na stránce vycentrovaný */
-	margin: 0 auto;
+  /* pruh je na stránce vycentrovaný */
+  margin: 0 auto;
 
-	background: white;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+.menu {
+  display: flex;
+  list-style-type: none;
+  /* justify-content: flex-start; */
+  padding: 10px 30px 10px 30px;
+  margin: 0 8px 0 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+}
+/* 
+chybi vyresit barvy na menu */
+.name {
+  font-weight: bold;
+  padding-right: 40px;
+}
+
+.banner {
+  background-image: url('images/pozadi.jpg');
+  min-height: 450px;
+  position: relative;
+}
+
+h1 {
+  font-size: 90px;
+  font-weight: 400;
+  color: white;
+  margin-top: 0;
+  margin-left: 30px;
+}
+
+.description {
+  font-size: 36px;
+  font-weight: 300;
+  color: white;
+  margin-left: 30px;
+}
+
+.buttons {
+  font-size: 20px;
+
+  padding: 20px;
+  padding-left: 30px;
+}
+
+.buttons a {
+  text-decoration: none;
+  border: solid white 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 20px;
+  color: white;
+}
+
+.buttons a:hover {
+  background-color: #48418e;
+}
+
+.picture {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+section {
+  display: flex;
+}
+
+/* chybi marginy a paddingy a articlech - zmensit marginy mezi articly */
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  margin: 50px;
+  text-align: center;
+}
+
+article img {
+  width: 30%;
+  align-self: center;
+}
+
+article h2 {
+  color: #25133d;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer {
+  background-color: #48418e;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
